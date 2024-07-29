@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="Module5.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Module5"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="290"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="GeneralQuiz" FontSize="45" HorizontalAlignment="Left" Margin="268,7,0,0" VerticalAlignment="Top" Height="66" Width="267" />
+        <Button Grid.Row="1" x:Name="start" Content="Start" HorizontalAlignment="Center" FontSize="35"  VerticalAlignment="Top" Width="208" Height="92" Click="Button_Click" Foreground="#FFF" Background="Black"/>
+        <TextBlock Grid.Row="1" x:Name="quest" Visibility="Visible" Text="" FontSize="20" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="672" Height="48" Foreground="#000" FontWeight="Bold" />
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="0" x:Name="ans1" Visibility="Collapsed" Content="Button1" FontSize="18" HorizontalAlignment="Right"  VerticalAlignment="Center" Width="308" Height="82" Foreground="#FFF" Background="#000" Click="ans1_Click"/>
+            <Button Grid.Row="0" Grid.Column="1" x:Name="ans2" Visibility="Collapsed" Content="Button2" Margin="100 0 0 0"  FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center" Width="292" Height="82" Foreground="#FFF" Background="#000" Click="ans2_Click"/>
+            <Button Grid.Row="1" Grid.Column="0" x:Name="ans4" Visibility="Collapsed" Content="Button3"  FontSize="18" HorizontalAlignment="Right"  VerticalAlignment="Center" Width="292" Height="82" Foreground="#FFF" Background="#000" Click="ans4_Click"/>
+            <Button Grid.Row="1" Grid.Column="1" x:Name="ans3" Visibility="Collapsed" Content="Button4"  FontSize="18" Margin="80 0 0 0" HorizontalAlignment="Left" VerticalAlignment="Center"  Width="308" Height="82" Foreground="#FFF" Background="#000" Click="ans3_Click"/>
+        </Grid>
+        <TextBlock Grid.Row="3" x:Name="scoreLbl" Visibility="Collapsed" Text="Score : " HorizontalAlignment="Left" VerticalAlignment="Top" Width="116" Foreground="White"/>
+        <TextBlock Grid.Row="4" x:Name="final" Visibility="Collapsed" Text="         Congratulations" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Button Grid.Row="1" x:Name="restart" Visibility="Collapsed" Content="Restart" HorizontalAlignment="Center" FontSize="35" VerticalAlignment="Top" Width="208" Height="92" Click="Button_Click2" Foreground="#FFF" Background="#000"/>
+
+    </Grid>
+</Page>
